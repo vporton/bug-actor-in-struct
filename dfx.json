@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "canvalue_backend": {
+      "main": "src/canvalue_backend/main.mo",
+      "type": "motoko"
+    },
+    "canvalue_frontend": {
+      "dependencies": [
+        "canvalue_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/canvalue_frontend/src/index.html"
+      },
+      "source": [
+        "src/canvalue_frontend/assets",
+        "dist/canvalue_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
